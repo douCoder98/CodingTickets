@@ -20,6 +20,12 @@
 
 ---
 
+## Diagramme de classes
+
+![Diagramme de classes](image.png)
+
+---
+
 ## 🌐 URLs principales
 |URL|Description|
 |----------|----------|
