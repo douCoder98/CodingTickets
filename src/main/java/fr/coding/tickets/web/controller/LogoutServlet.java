@@ -1,33 +1,34 @@
+// ==================== LogoutServlet.java (inchangé) ====================
 package fr.coding.tickets.web.controller;
 
 import java.io.IOException;
+
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-
 
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession(false);
-        
+
         if (session != null) {
             String userName = "Utilisateur";
             if (session.getAttribute("user") != null) {
                 userName = ((fr.coding.tickets.model.Utilisateur) session.getAttribute("user")).getNom();
             }
-            
+
             session.invalidate();
             System.out.println("✓ Déconnexion de : " + userName);
         }
-        
+
         response.sendRedirect(request.getContextPath() + "/login");
     }
 }

@@ -25,7 +25,7 @@ public class Organisateur extends Utilisateur {
             .filter(e -> e.getId().equals(evenementId))
             .findFirst()
             .orElseThrow(() -> new ReservationInvalideException("Événement introuvable"));
-        
+
         evenementsOrganises.remove(evenement);
     }
 }

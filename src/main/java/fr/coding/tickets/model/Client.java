@@ -19,13 +19,13 @@ public class Client extends Utilisateur {
         return new ArrayList<>(reservations);
     }
 
-    public void annulerReservation(Long reservationId) 
+    public void annulerReservation(Long reservationId)
             throws ReservationInvalideException, AnnulationTardiveException {
         Reservation reservation = reservations.stream()
             .filter(r -> r.getId().equals(reservationId))
             .findFirst()
             .orElseThrow(() -> new ReservationInvalideException("Réservation introuvable"));
-        
+
         reservation.annuler();
     }
 }

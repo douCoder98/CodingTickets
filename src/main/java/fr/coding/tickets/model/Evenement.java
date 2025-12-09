@@ -13,7 +13,7 @@ public class Evenement {
     private double prixBase;
     private Organisateur organisateur;
 
-    public Evenement(String titre, String description, LocalDateTime date, 
+    public Evenement(String titre, String description, LocalDateTime date,
                      String lieu, int nbPlaces, double prixBase) {
         this.titre = titre;
         this.description = description;
@@ -33,14 +33,14 @@ public class Evenement {
         if (nbPlaces <= 0) {
             throw new PlacesInsuffisantesException("Le nombre de places doit être positif");
         }
-        
+
         if (nbPlaces > nbPlacesRestantes) {
             throw new PlacesInsuffisantesException(
-                String.format("Places insuffisantes. Demandé: %d, Disponible: %d", 
+                String.format("Places insuffisantes. Demandé: %d, Disponible: %d",
                              nbPlaces, nbPlacesRestantes)
             );
         }
-        
+
         this.nbPlacesRestantes -= nbPlaces;
     }
 
@@ -53,9 +53,9 @@ public class Evenement {
         if (nbPlaces <= 0) {
             return;
         }
-        
+
         this.nbPlacesRestantes = Math.min(
-            this.nbPlacesRestantes + nbPlaces, 
+            this.nbPlacesRestantes + nbPlaces,
             this.nbPlacesTotales
         );
     }

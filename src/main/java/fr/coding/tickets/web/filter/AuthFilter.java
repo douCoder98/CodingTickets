@@ -1,5 +1,7 @@
 package fr.coding.tickets.web.filter;
 
+import java.io.IOException;
+
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;
@@ -10,7 +12,6 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.io.IOException;
 
 @WebFilter("/*")
 public class AuthFilter implements Filter {
@@ -21,30 +22,30 @@ public class AuthFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, 
+    public void doFilter(ServletRequest request, ServletResponse response,
                         FilterChain chain) throws IOException, ServletException {
-        
+
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-        
+
         String uri = httpRequest.getRequestURI();
         String contextPath = httpRequest.getContextPath();
         String path = uri.substring(contextPath.length());
-        
+
         // URLs publiques (accessibles sans authentification)
-        boolean isPublicUrl = path.equals("/login") || 
+        boolean isPublicUrl = path.equals("/login") ||
                              path.equals("/");
-        
+
         if (isPublicUrl) {
             // Laisser passer
             chain.doFilter(request, response);
             return;
         }
-        
+
         // Vérifier l'authentification
         HttpSession session = httpRequest.getSession(false);
         boolean isAuthenticated = (session != null && session.getAttribute("user") != null);
-        
+
         if (isAuthenticated) {
             // Utilisateur authentifié, laisser passer
             chain.doFilter(request, response);
