@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   db:
     image: postgres:15-alpine
-    container_name: tickets_db
+    container_name: coding_tickets_db
     environment:
       POSTGRES_DB: coding_tickets
       POSTGRES_USER: postgres
@@ -14,27 +12,36 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./init-db:/docker-entrypoint-initdb.d:ro
     networks:
-      - tickets_network
+      - coding_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d coding_tickets"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   app:
-    build: .
-    container_name: tickets_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: coding_tickets_app
+    ports:
+      - "8080:8080"
     environment:
       DB_HOST: db
       DB_PORT: 5432
-      DB_NAME: coding_tickets
       DB_USER: postgres
       DB_PASSWORD: postgres
-    ports:
-      - "8080:8080"
+      DB_DRIVER: org.postgresql.Driver
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
-      - tickets_network
+      - coding_network
 
 volumes:
   postgres_data:
+    driver: local
 
 networks:
-  tickets_network:
+  coding_network:
     driver: bridge
