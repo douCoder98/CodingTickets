@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: tickets_db
+    environment:
+      POSTGRES_DB: coding_tickets
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+    networks:
+      - tickets_network
+
+  app:
+    build: .
+    container_name: tickets_app
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: coding_tickets
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - tickets_network
+
+volumes:
+  postgres_data:
+
+networks:
+  tickets_network:
+    driver: bridge

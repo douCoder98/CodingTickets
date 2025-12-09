@@ -1,0 +1,12 @@
+.git/
+.gitignore
+.classpath
+.project
+.settings/
+.metadata/
+build/classes/
+*.class
+*.log
+*.md
+!README.md
+.DS_Store
