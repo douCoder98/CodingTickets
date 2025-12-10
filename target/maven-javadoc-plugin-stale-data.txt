@@ -1,0 +1,55 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'/Users/papaabdoumbodji/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar:/Users/papaabdoumbodji/.m2/repository/org/postgresql/postgresql/42.7.1/postgresql-42.7.1.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Coding Tickets 1.0.0 API'
+-use
+-version
+-windowtitle
+'Coding Tickets 1.0.0 API'
+fr.coding.tickets.util
+fr.coding.tickets.web.listener
+fr.coding.tickets.web.controller
+fr.coding.tickets.web.filter
+fr.coding.tickets.dao
+fr.coding.tickets.dao.jdbc
+fr.coding.tickets.model
+fr.coding.tickets.service
+/Users/papaabdoumbodji/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar = 1716572121000
+/Users/papaabdoumbodji/.m2/repository/org/postgresql/postgresql/42.7.1/postgresql-42.7.1.jar = 1701876361000
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/db.properties = 1764929423771
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java = 1764927543231
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/tag-search-index.js = 1765377576895
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/overview-tree.html = 1765377576861
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/module-search-index.js = 1765377576892
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/index.html = 1765377576864
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/package-search-index.js = 1765377576893
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/serialized-form.html = 1765377576736
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/index-all.html = 1765377576925
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/allpackages-index.html = 1765377576891
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/member-search-index.js = 1765377576894
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/overview-summary.html = 1765377576928
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/help-doc.html = 1765377576931
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/element-list = 1765377576693
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/search.html = 1765377576927
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/allclasses-index.html = 1765377576889
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/target/site/apidocs/type-search-index.js = 1765377576893
