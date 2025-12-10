@@ -3,21 +3,21 @@ INSERT INTO UTILISATEUR (nom, email, mot_de_passe, role) VALUES
     'Jean Dupont', 
     'jean.dupont@email.fr',
     -- password123
-    'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=',
+    '"75K3eLr+dx6JJFuJ7LwIpEpOFmwGZZkRiB84PURz6U8="',
     'CLIENT'
 ),
 (
     'Marie Martin', 
     'marie.martin@email.fr',
     -- password456
-    '0YhHRvYUW5T8QJtWZSZ5eQK3ZDzY5OJmFafKMic9Wk8=',
+    '"xrqRuQ2SLhWYk/RsOH5dwbPcXBAaWkUi8DuYcXeiSpE="',
     'CLIENT'
 ),
 (
     'Pierre Durand', 
     'pierre.durand@email.fr',
     -- password789
-    'H0gijvOLwObEWdUyIBtPXPVDHdCJQrS7qZUTK5gCZXQ=',
+    '"XvwrAX2k93NtGSp03eWJE2ngaF1NOPKkVbb82rKC35w="',
     'CLIENT'
 );
 
@@ -30,14 +30,14 @@ INSERT INTO UTILISATEUR (nom, email, mot_de_passe, role) VALUES
     'Sophie Legrand', 
     'sophie.legrand@events.fr',
     -- org123
-    'iQkMXxY6CbZHl8hDtFTQSlhWNJxgZxRZItdbhHUeMTM=',
+    '"0Ia4QWOm3j8x1Ghtvsoxq0hMb4MuLHCrXyFxzO8M/s8="',
     'ORGANISATEUR'
 ),
 (
     'Thomas Bernard', 
     'thomas.bernard@events.fr',
     -- org456
-    '7Yfcylq9K/1M14otNIG+PiEKnY1dBWQze0caVGUa38M=',
+    '"ZHF/RZcfWxLaV+IUg0KDPOnQreJ7y59gw1Jc2Su3ZKU="',
     'ORGANISATEUR'
 );
 
