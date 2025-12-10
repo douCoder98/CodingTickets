@@ -28,10 +28,10 @@ public class TicketService {
     private EvenementDao evenementDao;
     private ReservationDao reservationDao;
 
-    public TicketService(UtilisateurDao utilisateurDao, EvenementDao evenementDao, ReservationDao reservationDao) {
-        this.utilisateurDao = utilisateurDao;
-        this.evenementDao = evenementDao;
-        this.reservationDao = reservationDao;
+    public TicketService() {
+        this.utilisateurDao = new JdbcUtilisateurDao();
+        this.evenementDao = new JdbcEvenementDao();
+        this.reservationDao = new JdbcReservationDao();
 
         System.out.println("========================================");
         System.out.println("   INITIALISATION DU SERVICE (DAO)");

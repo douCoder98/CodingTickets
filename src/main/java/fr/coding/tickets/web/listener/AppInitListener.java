@@ -19,7 +19,7 @@ public class AppInitListener implements ServletContextListener {
         System.out.println("========================================");
 
         // Création et initialisation du service
-        TicketService ticketService = new TicketService(null, null, null);
+        TicketService ticketService = new TicketService();
 
         // Stockage dans le contexte
         context.setAttribute("ticketService", ticketService);
