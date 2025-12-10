@@ -21,10 +21,13 @@ import fr.coding.tickets.model.Role;
 import fr.coding.tickets.model.StatutReservation;
 import fr.coding.tickets.model.Utilisateur;
 
+/**
+ * Service métier principal avec authentification sécurisée
+ */
 public class TicketService {
 
     // DAOs
-    private UtilisateurDao utilisateurDao;
+    private JdbcUtilisateurDao utilisateurDao;  // Changé pour accéder à emailExists()
     private EvenementDao evenementDao;
     private ReservationDao reservationDao;
 
@@ -35,17 +38,22 @@ public class TicketService {
 
         System.out.println("========================================");
         System.out.println("   INITIALISATION DU SERVICE (DAO)");
+        System.out.println("   Avec hashing sécurisé des mots de passe");
         System.out.println("========================================");
         System.out.println("✓ TicketService créé avec accès base de données");
         System.out.println("========================================\n");
     }
 
+    /**
+     * Authentification avec vérification de hash
+     */
     public Utilisateur authentifier(String email, String motDePasse) {
         if (email == null || motDePasse == null) {
             return null;
         }
 
         try {
+            // Le DAO gère maintenant la vérification du hash
             return utilisateurDao.findByEmailAndPassword(email, motDePasse);
         } catch (DaoException e) {
             System.err.println("Erreur lors de l'authentification : " + e.getMessage());
@@ -120,7 +128,7 @@ public class TicketService {
             // Sauvegarder la réservation en base
             reservationDao.create(reservation);
 
-            //Confirmer la réservation
+            // Confirmer la réservation
             reservation.confirmer();
             reservationDao.update(reservation);
 
@@ -195,6 +203,7 @@ public class TicketService {
     }
 
     // ========== MÉTHODES POUR ORGANISATEURS ==========
+    
     public Evenement creerEvenement(Organisateur organisateur, String titre,
                                    String description, LocalDateTime date,
                                    String lieu, int nbPlaces, double prixBase)
@@ -272,14 +281,16 @@ public class TicketService {
         }
     }
 
+    /**
+     * Inscription avec vérification d'email et hashing du mot de passe
+     */
     public Utilisateur inscrireUtilisateur(String nom, String email,
                                           String motDePasse, Role role)
             throws ReservationInvalideException {
 
         try {
-            // Vérifie que l'email n'existe pas déjà (via tentative d'authentification)
-            Utilisateur existant = utilisateurDao.findByEmailAndPassword(email, motDePasse);
-            if (existant != null) {
+            // Vérifie que l'email n'existe pas déjà
+            if (utilisateurDao.emailExists(email)) {
                 throw new ReservationInvalideException("Cet email est déjà utilisé");
             }
 
@@ -290,9 +301,10 @@ public class TicketService {
                 utilisateur = new Organisateur(nom, email, motDePasse);
             }
 
+            // Le DAO gère automatiquement le hashing du mot de passe
             utilisateurDao.create(utilisateur);
 
-            System.out.println("✓ Utilisateur inscrit - " + role + ": " + nom);
+            System.out.println("✓ Utilisateur inscrit avec mot de passe hashé - " + role + ": " + nom);
 
             return utilisateur;
 

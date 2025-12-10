@@ -1,0 +1,9 @@
+fr/coding/tickets/test/ReservationCreationTest$ParametresInvalidesTests.class
+fr/coding/tickets/test/ReservationCreationTest$CalculMontantTests.class
+fr/coding/tickets/test/ReservationCreationTest$ConcurrenceTests.class
+fr/coding/tickets/test/ReservationCreationTest.class
+fr/coding/tickets/test/ReservationCreationTest$SuccessTests.class
+fr/coding/tickets/test/ReservationCreationTest$CasLimitesTests.class
+fr/coding/tickets/test/ReservationCreationTest$IntegrationTests.class
+fr/coding/tickets/test/ReservationCreationTest$PlacesInsuffisantesTests.class
+fr/coding/tickets/test/ReservationAnnulationTest.class

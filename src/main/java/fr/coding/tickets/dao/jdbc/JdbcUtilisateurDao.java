@@ -1,4 +1,3 @@
-// ==================== JdbcUtilisateurDao.java ====================
 package fr.coding.tickets.dao.jdbc;
 
 import java.sql.Connection;
@@ -14,23 +13,37 @@ import fr.coding.tickets.model.Client;
 import fr.coding.tickets.model.Organisateur;
 import fr.coding.tickets.model.Role;
 import fr.coding.tickets.model.Utilisateur;
+import fr.coding.tickets.util.PasswordHasher;
 
+/**
+ * DAO JDBC pour les utilisateurs avec hashing sécurisé des mots de passe
+ */
 public class JdbcUtilisateurDao implements UtilisateurDao {
 
     @Override
-    public Utilisateur findByEmailAndPassword(String email, String password) throws DaoException {
-        String sql = "SELECT * FROM UTILISATEUR WHERE email = ? AND mot_de_passe = ?";
+    public Utilisateur findByEmailAndPassword(String email, String plainPassword) throws DaoException {
+        // ÉTAPE 1 : Récupérer l'utilisateur par email uniquement
+        String sql = "SELECT * FROM UTILISATEUR WHERE email = ?";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, email);
-            stmt.setString(2, password);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    return mapResultSetToUtilisateur(rs);
+                    String storedHash = rs.getString("mot_de_passe");
+                    
+                    // ÉTAPE 2 : Vérifier le mot de passe avec le hash stocké
+                    if (PasswordHasher.verifyPassword(plainPassword, storedHash)) {
+                        // Mot de passe correct, retourner l'utilisateur
+                        return mapResultSetToUtilisateur(rs);
+                    } else {
+                        // Mot de passe incorrect
+                        return null;
+                    }
                 }
+                // Email non trouvé
                 return null;
             }
 
@@ -109,12 +122,17 @@ public class JdbcUtilisateurDao implements UtilisateurDao {
 
             stmt.setString(1, utilisateur.getNom());
             stmt.setString(2, utilisateur.getEmail());
-            stmt.setString(3, utilisateur.getMotDePasse());
+            
+            // IMPORTANT : Hash le mot de passe avant insertion
+            String hashedPassword = PasswordHasher.hashPassword(utilisateur.getMotDePasse());
+            stmt.setString(3, hashedPassword);
+            
             stmt.setString(4, utilisateur.getRole().name());
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     utilisateur.setId(rs.getLong("id"));
+                    System.out.println("✓ Utilisateur créé avec mot de passe hashé - ID: " + utilisateur.getId());
                 } else {
                     throw new DaoException("Échec de la création de l'utilisateur");
                 }
@@ -138,12 +156,19 @@ public class JdbcUtilisateurDao implements UtilisateurDao {
 
             stmt.setString(1, utilisateur.getNom());
             stmt.setString(2, utilisateur.getEmail());
-            stmt.setString(3, utilisateur.getMotDePasse());
+            
+            // IMPORTANT : Hash le mot de passe si nécessaire
+            String password = utilisateur.getMotDePasse();
+            if (!PasswordHasher.isHashed(password)) {
+                password = PasswordHasher.hashPassword(password);
+            }
+            stmt.setString(3, password);
+            
             stmt.setObject(4, utilisateur.getRole().name(), java.sql.Types.OTHER);
             stmt.setLong(5, utilisateur.getId());
 
             int rows = stmt.executeUpdate();
-            System.out.println("DEBUG - Utilisateur mis à jour, lignes affectées : " + rows);
+            System.out.println("✓ Utilisateur mis à jour - Lignes affectées : " + rows);
 
         } catch (SQLException e) {
             System.err.println("❌ Erreur SQL update utilisateur : " + e.getMessage());
@@ -151,11 +176,11 @@ public class JdbcUtilisateurDao implements UtilisateurDao {
         } finally {
             try {
                 if (stmt != null) {
-					stmt.close();
-				}
+                    stmt.close();
+                }
                 if (conn != null) {
-					conn.close();
-				}
+                    conn.close();
+                }
             } catch (SQLException e) {
                 System.err.println("Erreur fermeture : " + e.getMessage());
             }
@@ -183,5 +208,28 @@ public class JdbcUtilisateurDao implements UtilisateurDao {
         utilisateur.setId(id);
 
         return utilisateur;
+    }
+
+    /**
+     * Méthode utilitaire pour vérifier si un email existe déjà
+     */
+    public boolean emailExists(String email) throws DaoException {
+        String sql = "SELECT COUNT(*) FROM UTILISATEUR WHERE email = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, email);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+                return false;
+            }
+
+        } catch (SQLException e) {
+            throw new DaoException("Erreur lors de la vérification de l'email", e);
+        }
     }
 }

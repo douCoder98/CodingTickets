@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk17-temurin
+FROM tomcat:9.0-jdk17-temurin
 
 #Supprimer les applications de démonstration
 RUN rm -rf /usr/local/tomcat/webapps/*

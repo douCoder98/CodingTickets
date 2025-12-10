@@ -24,4 +24,5 @@
 /Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/fr/coding/tickets/web/controller/ReservationHistoryServlet.java
 /Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/fr/coding/tickets/dao/ReservationDao.java
 /Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/fr/coding/tickets/web/controller/ReservationCreateServlet.java
+/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/fr/coding/tickets/util/PasswordHasher.java
 /Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/main/java/fr/coding/tickets/web/filter/AuthFilter.java

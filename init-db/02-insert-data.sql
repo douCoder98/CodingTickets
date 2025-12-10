@@ -1,11 +1,45 @@
 INSERT INTO UTILISATEUR (nom, email, mot_de_passe, role) VALUES
-('Jean Dupont', 'jean.dupont@email.fr', 'password123', 'CLIENT'),
-('Marie Martin', 'marie.martin@email.fr', 'password456', 'CLIENT'),
-('Pierre Durand', 'pierre.durand@email.fr', 'password789', 'CLIENT');
+(
+    'Jean Dupont', 
+    'jean.dupont@email.fr',
+    -- password123
+    'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=',
+    'CLIENT'
+),
+(
+    'Marie Martin', 
+    'marie.martin@email.fr',
+    -- password456
+    '0YhHRvYUW5T8QJtWZSZ5eQK3ZDzY5OJmFafKMic9Wk8=',
+    'CLIENT'
+),
+(
+    'Pierre Durand', 
+    'pierre.durand@email.fr',
+    -- password789
+    'H0gijvOLwObEWdUyIBtPXPVDHdCJQrS7qZUTK5gCZXQ=',
+    'CLIENT'
+);
+
+-- =====================================================
+-- INSERTION DES UTILISATEURS (ORGANISATEURS)
+-- =====================================================
 
 INSERT INTO UTILISATEUR (nom, email, mot_de_passe, role) VALUES
-('Sophie Legrand', 'sophie.legrand@events.fr', 'org123', 'ORGANISATEUR'),
-('Thomas Bernard', 'thomas.bernard@events.fr', 'org456', 'ORGANISATEUR');
+(
+    'Sophie Legrand', 
+    'sophie.legrand@events.fr',
+    -- org123
+    'iQkMXxY6CbZHl8hDtFTQSlhWNJxgZxRZItdbhHUeMTM=',
+    'ORGANISATEUR'
+),
+(
+    'Thomas Bernard', 
+    'thomas.bernard@events.fr',
+    -- org456
+    '7Yfcylq9K/1M14otNIG+PiEKnY1dBWQze0caVGUa38M=',
+    'ORGANISATEUR'
+);
 
 INSERT INTO EVENEMENT (titre, description, lieu, date_evenement, nb_places_totales, nb_places_restantes, prix_base, organisateur_id) VALUES
 (

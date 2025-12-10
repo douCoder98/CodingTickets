@@ -5,17 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b70731-646d-496f-8c6d-1d93a5aa4d44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/coding/tickets/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/coding/tickets/service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/coding/tickets/web/listener/AppInitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/coding/tickets/web/listener/AppInitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tickets_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tickets_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/DaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/DaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcEvenementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcEvenementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcReservationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcReservationDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcUtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/dao/jdbc/JdbcUtilisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/AnnulationTardiveException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/AnnulationTardiveException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Evenement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Organisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Organisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/PlacesInsuffisantesException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/PlacesInsuffisantesException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/ReservationInvalideException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/ReservationInvalideException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/StatutReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/StatutReservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Utilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/model/Utilisateur.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/service/TicketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/service/TicketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/EventListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/EventListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationCancelServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationCancelServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationCreateServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationCreateServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationHistoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/controller/ReservationHistoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/filter/AuthFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/listener/AppInitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/coding/tickets/web/listener/AppInitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/fr.coding/tickets/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/fr.coding/tickets/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tickets.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tickets.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/listener/AppInitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/listener/AppInitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tickets/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/DaoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/EvenementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/ReservationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/UtilisateurDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/jdbc/DatabaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/jdbc/JdbcEvenementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/jdbc/JdbcReservationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/dao/jdbc/JdbcUtilisateurDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/listener/AppInitListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/AnnulationTardiveException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Evenement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Organisateur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/PlacesInsuffisantesException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Reservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/ReservationInvalideException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/StatutReservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/model/Utilisateur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/service/TicketService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/EventListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/ReservationCancelServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/ReservationCreateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/controller/ReservationHistoryServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/filter/AuthFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/classes/fr/coding/tickets/web/listener/AppInitListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/jsp/events.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/jsp/reservations.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/lib/checker-qual-3.41.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/lib/postgresql-42.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tickets/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +95,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.tickets [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -47,6 +107,7 @@
     "git-widget-placeholder": "partie-2",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Users/papaabdoumbodji/Desktop/B-School/M2/Java Avancé/Projet/CodingTickets/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -248,6 +309,7 @@
       <updated>1764924852355</updated>
       <workItem from="1764924853979" duration="14000" />
       <workItem from="1765284093451" duration="5339000" />
+      <workItem from="1765365574324" duration="250000" />
     </task>
     <servers />
   </component>

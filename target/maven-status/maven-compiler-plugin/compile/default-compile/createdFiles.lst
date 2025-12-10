@@ -16,6 +16,7 @@ fr/coding/tickets/model/PlacesInsuffisantesException.class
 fr/coding/tickets/model/StatutReservation.class
 fr/coding/tickets/model/Client.class
 fr/coding/tickets/web/controller/ReservationCancelServlet.class
+fr/coding/tickets/util/PasswordHasher.class
 fr/coding/tickets/dao/jdbc/JdbcReservationDao.class
 fr/coding/tickets/web/controller/ReservationHistoryServlet.class
 fr/coding/tickets/model/Reservation.class
