@@ -1,4 +1,4 @@
-package fr.coding.tickets.listener;
+package fr.coding.tickets.web.listener;
 
 import fr.coding.tickets.service.TicketService;
 import jakarta.servlet.ServletContext;
@@ -19,7 +19,7 @@ public class AppInitListener implements ServletContextListener {
         System.out.println("========================================");
 
         // Création et initialisation du service
-        TicketService ticketService = new TicketService();
+        TicketService ticketService = new TicketService(null, null, null);
 
         // Stockage dans le contexte
         context.setAttribute("ticketService", ticketService);
